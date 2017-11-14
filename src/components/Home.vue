@@ -65,6 +65,11 @@ p{
   background-color: #3b2577;
   display: block;
   cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.left > p {
+  transition: all 0.6s ease;
 }
 
 .left:hover
@@ -80,9 +85,13 @@ p{
   background-color: #3b2577;
   display: block;
   cursor: pointer;
+  transition: all 0.6s ease;
 }
 .right:hover {
   background-color: #ffcc00;
+}
+.right > p {
+  transition: all 0.6s ease;
 }
 .right:hover > p {
   color: #3b2577;
