@@ -19,19 +19,21 @@
             <div class="row">
                 <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <ul class="card-holder">
-                        <li class="card-current" v-for="book in bookings" v-if="book.active"> <div class="text-history">{{ book.name }} </div> <div class="text-under-history">{{ book.timing }}</div></li>
+                        <li class="card-current" v-for="book in bookings" v-if="book.active"> <div class="text-current">{{ book.name }} </div> <div class="text-under-current">{{ book.timing }}</div> <div class="text-under-under-current"><a class="cancel">Cancel</a></div></li>
                         <li class="card-history" v-for="book in bookings" v-if="!book.active"> <div class="text-history">{{ book.name }} </div> <div class="text-under-history">{{ book.timing }}</div></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        
     </div>
 </template>
 
 <script>
   import MadButton from '@/components/MadButton'
   export default {
-    name: 'Deparment',
+    name: 'History',
     components: {
       MadButton
     },
@@ -70,6 +72,20 @@
     right: 40px;
     top: 45px;
 }
+
+.cancel{
+    display: inline-block;
+    margin-top: -5px;
+    color: white;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    font-size: 0.6em;
+}
+
+a:hover{
+    color: #ffcc00;
+}
+
 .hosp-name{
     display: inline-block;
     position: relative;
@@ -149,5 +165,19 @@
 
 .text-under-history{
     font-size: 0.5em;
+}
+
+.text-current{
+    display: block;
+    margin-top: 6.5%;
+}
+
+.text-under-current{
+    font-size: 0.5em;
+}
+
+.text-under-under-current{
+    font-size: 1em;
+    margin-top: -1%;
 }
 </style>

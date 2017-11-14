@@ -9,6 +9,7 @@ import Doctor from '@/components/Doctor'
 import PickDate from '@/components/PickDate'
 import Time from '@/components/Time'
 import HistoryBooking from '@/components/History'
+import View from '@/components/View'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/history',
       name: 'History',
       component: HistoryBooking
+    },
+    {
+      path: '/view',
+      name: 'View',
+      component: View
     }
   ]
 })
