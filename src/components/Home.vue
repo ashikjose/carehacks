@@ -3,18 +3,18 @@
         <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <div class="row">
             <div class="container-fluid">
-              <div class="left">
-                <p class="white lato">View Bookings</p>
-              </div>
+              <router-link to="/history"><div class="left">
+                <a class="white lato">View Bookings</a>
+              </div></router-link>
             </div>
           </div>
         </div>
         <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <div class="row">
             <div class="container-fluid">
-              <div class="right">
-                <p class="lato white">Book</p>
-              </div>
+              <router-link to="/hospitals"><div class="right">
+                <a class="lato white">Book</a>
+              </div></router-link>
             </div>
           </div>
         </div>
@@ -31,11 +31,12 @@ export default {
 </script>
 
 <style scoped>
-p{
+a{
   position: relative;
   vertical-align: middle;
   text-align: center;
   top: 45%;
+  text-decoration: none;
 }
 
 .container-fluid{
@@ -66,18 +67,21 @@ p{
   display: block;
   cursor: pointer;
   transition: all 0.6s ease;
+  
 }
 
-.left > p {
-  transition: all 0.6s ease;
+.left > a {
+  transition: all   s ease;
 }
 
 .left:hover
 {
   background-color: #ffcc00;
+  text-decoration: none;
 }
-.left:hover > p {
+.left:hover > a {
   color: #3b2577;
+  text-decoration: none;
 }
 
 .right{
@@ -90,10 +94,10 @@ p{
 .right:hover {
   background-color: #ffcc00;
 }
-.right > p {
+.right > a {
   transition: all 0.6s ease;
 }
-.right:hover > p {
+.right:hover > a {
   color: #3b2577;
 }
 
