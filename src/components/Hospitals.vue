@@ -13,7 +13,11 @@
                     </form>
                 </div>
             </div>
-        
+            <div class="listbox">
+                <ul>
+                    <li class="listitems" v-for="item in hospitallist"><a>{{item.name}}</a></li>
+                </ul>
+            </div>
 
     </div>
 </template>
@@ -32,7 +36,25 @@ export default {
       textOne: 'text',
       nameOne: 'search',
       Msg: 'Search',
-      text: 'Enter Hospital\'s name or Doctor\'s name'
+      text: 'Enter Hospital\'s name or Doctor\'s name',
+      hospitallist: [
+        {
+          name: 'Aster Medcity',
+          address: 'Kochi Kerala'
+        },
+        {
+          name: 'Asterasd Medcity',
+          address: 'Kochi Kerala'
+        },
+        {
+          name: 'Aster dsdMedcity',
+          address: 'Kochi Kerala'
+        },
+        {
+          name: 'Aster fse Medcity',
+          address: 'Kochi Kerala'
+        }
+      ]
     }
   }
 }
@@ -57,4 +79,29 @@ export default {
     top: 20px;
 }
 
+.listbox{
+    padding-top: 10%;
+}
+.listitems{
+    
+    list-style: none;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    color: black;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 2.4rem;
+    transition: all 0.6s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+a:hover, a:active {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.0);
+}
 </style>
