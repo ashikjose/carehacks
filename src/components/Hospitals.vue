@@ -88,7 +88,7 @@ export default {
     font-family: "Lato", sans-serif;
     text-align: center;
     color: black;
-    padding: 5px;
+    padding: 3px;
 }
 
 a {
