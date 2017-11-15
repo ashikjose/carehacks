@@ -98,10 +98,10 @@ a {
     font-weight: 300;
     font-size: 2.4rem;
     transition: all 0.6s ease;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.0);
 }
 
 a:hover, a:active {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.0);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 </style>
